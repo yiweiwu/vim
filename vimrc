@@ -36,9 +36,13 @@ set cursorline
 " Set up color scheme
 set t_Co=256
 set background=dark
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans = 1
+" let g:gruvbox_termcolors=16
+let g:gruvbox_italic=0
 " colorscheme solarized
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme gruvbox
 " colorscheme noctu
 " colorscheme molokai
 
