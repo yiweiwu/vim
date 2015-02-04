@@ -1,6 +1,9 @@
 execute pathogen#infect()
 syntax on
 filetype indent plugin on
+set encoding=utf-8
+set term=xterm-256color
+set termencoding=utf-8
 
 set modeline
 " Don't use the tab character, convert them to spaces
@@ -38,11 +41,12 @@ set t_Co=256
 set background=dark
 " let g:solarized_termcolors=256
 " let g:solarized_termtrans = 1
-" let g:gruvbox_termcolors=16
-let g:gruvbox_italic=0
 " colorscheme solarized
+" let g:gruvbox_termcolors=16
+" let g:gruvbox_italic=0
 " colorscheme jellybeans
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme distinguished
 " colorscheme noctu
 " colorscheme molokai
 
@@ -56,7 +60,11 @@ set tags+=~/src/beautifulmind/tags
 set laststatus=2
 
 " Display buffer on the top
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled=1
+
+" Use powerline font in airline
+let g:airline_powerline_fonts=1
+set guifont=Inconsolata\ for\ Powerline
 
 " Move down/up a single row on the screen
 :nmap j gj
