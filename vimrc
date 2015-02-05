@@ -1,9 +1,6 @@
 execute pathogen#infect()
 syntax on
 filetype indent plugin on
-set encoding=utf-8
-set term=xterm-256color
-set termencoding=utf-8
 
 set modeline
 " Don't use the tab character, convert them to spaces
@@ -46,7 +43,9 @@ set background=dark
 " let g:gruvbox_italic=0
 " colorscheme jellybeans
 " colorscheme gruvbox
-colorscheme distinguished
+" colorscheme distinguished
+" colorscheme kolor
+colorscheme Tomorrow-Night-Bright
 " colorscheme noctu
 " colorscheme molokai
 
@@ -65,6 +64,9 @@ let g:airline#extensions#tabline#enabled=1
 " Use powerline font in airline
 let g:airline_powerline_fonts=1
 set guifont=Inconsolata\ for\ Powerline
+
+" Set the airline theme
+let g:airline_theme='tomorrow'
 
 " Move down/up a single row on the screen
 :nmap j gj

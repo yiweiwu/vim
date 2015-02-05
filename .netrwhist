@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/yiweiwu/src/beautifulmind/notification'
-let g:netrw_dirhist_2='/home/yiweiwu/src/beautifulmind/seleniumtest'
-let g:netrw_dirhist_3='/home/yiweiwu/src/beautifulmind/templates/jobsdone/requestng'
-let g:netrw_dirhist_4='/home/yiweiwu/src/beautifulmind/templates/jobsdone/requestng/tests'
-let g:netrw_dirhist_5='/home/yiweiwu/src/beautifulmind/onboarding'
-let g:netrw_dirhist_6='/home/yiweiwu/src/beautifulmind/beautifulmind/test'
-let g:netrw_dirhist_7='/home/yiweiwu/src/beautifulmind/beautifulmind/hdstore'
-let g:netrw_dirhist_8='/home/yiweiwu/src/beautifulmind/beautifulmind/twilio_helper'
-let g:netrw_dirhist_9='/home/yiweiwu/src/beautifulmind/beautifulmind/backends/srv_tacoticket'
+let g:netrw_dirhist_cnt =0
