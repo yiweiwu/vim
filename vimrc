@@ -56,7 +56,9 @@ set background=dark
 " colorscheme Tomorrow-Night
 " colorscheme noctu
 " colorscheme molokai
-colorscheme mango
+" colorscheme mango
+let g:hybrid_use_iTerm_colors = 1
+colorscheme hybrid
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
@@ -75,7 +77,7 @@ let g:airline_powerline_fonts=1
 set guifont=Inconsolata\ for\ Powerline
 
 " Set the airline theme
-" let g:airline_theme= "luna"
+let g:airline_theme= "powerlineish"
 " 'tomorrow'
 " 'badwolf'
 
