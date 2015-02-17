@@ -57,8 +57,9 @@ set background=dark
 " colorscheme noctu
 " colorscheme molokai
 " colorscheme mango
-let g:hybrid_use_iTerm_colors = 1
+" let g:hybrid_use_iTerm_colors = 1
 colorscheme hybrid
+" colorscheme iceberg
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
