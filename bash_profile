@@ -10,8 +10,6 @@ elif [[ "${osname}" == 'Darwin' ]]; then
     platform='darwin'
 fi
 
-echo $platform
-
 # Make the ls colorful
 if [[ "${platform}" == 'darwin' ]]; then
     export CLICOLOR=1
