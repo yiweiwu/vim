@@ -1,8 +1,24 @@
 #!/bin/bash
 
+# I need to know is it running on Linux
+# or on my Mac
+platform='unknown'
+osname=$(uname)
+if [[ "${osname}" == 'Linux' ]]; then
+    platform='linux'
+elif [[ "${osname}" == 'Darwin' ]]; then
+    platform='darwin'
+fi
+
+echo $platform
+
 # Make the ls colorful
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
+if [[ "${platform}" == 'darwin' ]]; then
+    export CLICOLOR=1
+    export LSCOLORS=ExFxCxDxBxegedabagacad
+elif [[ "${platform}" == 'linux' ]]; then
+    alias ls="ls --color=auto"
+fi
 
 # Prompt
 # Copy and revise from:
