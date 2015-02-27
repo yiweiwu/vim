@@ -22,6 +22,26 @@ fi
 # Copy and revise from:
 #   https://github.com/necolas/dotfiles
 
+prompt_git() {
+    local branchName=""
+
+    # check if the current directory is in a git repo
+    if [ $(git rev-parse --is-inside-work-tree &>/dev/null; printf "%s" $?) == 0 ]; then
+
+        # get the short symbolic ref
+        # if HEAD isn't a symbolic ref, get the short SHA
+        # otherwise, just give up
+        branchName="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
+                      git rev-parse --short HEAD 2> /dev/null || \
+                      printf "(unknown)")"
+
+        printf "%s" "$1$branchName"
+
+    else
+        return
+    fi
+
+}
 set_prompts() {
     local black=$(tput setaf 0)
     local blue=$(tput setaf 33)
@@ -46,6 +66,7 @@ set_prompts() {
     PS1+="\[$hostStyle\]\h"
     PS1+="\[$reset$white\]: "
     PS1+="\[$green\]\w"
+    PS1+="\$(prompt_git \"$white on $cyan\")" # git repository details
     PS1+="\n"
     PS1+="\[$reset$white\]\$ \[$reset\]"
 
