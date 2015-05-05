@@ -31,8 +31,8 @@ set autoindent
 set backspace=indent,eol,start
 
 " Indentation for different file types
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-autocmd FileType css setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 expendtab
+autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 expendtab
 
 " Show line number
 set number
