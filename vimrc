@@ -31,8 +31,8 @@ set autoindent
 set backspace=indent,eol,start
 
 " Indentation for different file types
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 expendtab
-autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 expendtab
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Show line number
 set number
@@ -58,8 +58,10 @@ set background=dark
 " colorscheme molokai
 " colorscheme mango
 " let g:hybrid_use_iTerm_colors = 1
-colorscheme hybrid
+" colorscheme hybrid
 " colorscheme iceberg
+" colorscheme zenburn
+colorscheme flatlandia
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
