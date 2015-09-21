@@ -33,6 +33,7 @@ set backspace=indent,eol,start
 " Indentation for different file types
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType php setlocal iskeyword+=:,- shiftwidth=2 tabstop=2 softtabstop=2
 
 " Show line number
 set number
