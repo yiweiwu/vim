@@ -63,7 +63,8 @@ set background=dark
 " colorscheme iceberg
 " colorscheme zenburn
 " colorscheme flatlandia
-colorscheme lucius
+" colorscheme lucius
+colorscheme darcula
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
