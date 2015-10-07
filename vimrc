@@ -33,7 +33,7 @@ set backspace=indent,eol,start
 " Indentation for different file types
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType php setlocal iskeyword+=:,- shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType php setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Show line number
 set number
@@ -70,7 +70,7 @@ colorscheme darcula
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Enable Ctags
-set tags+=~/src/beautifulmind/tags
+set tags=tags;/
 
 " Show vim-airline statusline all the time
 set laststatus=2
@@ -84,8 +84,6 @@ set guifont=Inconsolata\ for\ Powerline
 
 " Set the airline theme
 let g:airline_theme= "powerlineish"
-" 'tomorrow'
-" 'badwolf'
 
 
 " Move down/up a single row on the screen
