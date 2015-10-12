@@ -1,5 +1,13 @@
 #!/bin/bash
 
+PATH=$PATH:~/devtools/arcanist/bin
+
+# added by setup_fb4a.sh
+export ANDROID_SDK=/opt/android_sdk
+export ANDROID_NDK_REPOSITORY=/opt/android_ndk
+export ANDROID_HOME=${ANDROID_SDK}
+export PATH=${PATH}:${ANDROID_SDK}/tools:${ANDROID_SDK}/platform-tools
+
 # I need to know is it running on Linux
 # or on my Mac
 platform='unknown'
@@ -22,7 +30,7 @@ fi
 # Copy and revise from:
 #   https://github.com/necolas/dotfiles
 
-prompt_git() {
+prompt_source_control() {
     local branchName=""
 
     # check if the current directory is in a git repo
@@ -38,10 +46,16 @@ prompt_git() {
         printf "%s" "$1$branchName"
 
     else
-        return
+        if [ -f /opt/facebook/share/scm-prompt ]; then
+            source /opt/facebook/share/scm-prompt
+            if [[ -n $(_dotfiles_scm_info) ]]; then
+                printf "%s" "$1$(_dotfiles_scm_info)"
+            fi
+        fi
     fi
 
 }
+
 set_prompts() {
     local black=$(tput setaf 0)
     local blue=$(tput setaf 33)
@@ -66,7 +80,7 @@ set_prompts() {
     PS1+="\[$hostStyle\]\h"
     PS1+="\[$reset$white\]: "
     PS1+="\[$green\]\w"
-    PS1+="\$(prompt_git \"$white on $cyan\")" # git repository details
+    PS1+="\$(prompt_source_control \"$white on $cyan\")"
     PS1+="\n"
     PS1+="\[$reset$white\]\$ \[$reset\]"
 
