@@ -85,7 +85,6 @@ set guifont=Inconsolata\ for\ Powerline
 " Set the airline theme
 let g:airline_theme= "powerlineish"
 
-
 " Move down/up a single row on the screen
 :nmap j gj
 :nmap k gk
@@ -100,3 +99,6 @@ set smartcase
 set hlsearch
 " Clear highlight
 :nmap \q :nohlsearch<CR>
+
+" Add ctrl P
+set runtimepath^=~/.vim/bundle/ctrlp.vim
