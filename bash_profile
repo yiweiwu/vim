@@ -26,6 +26,8 @@ elif [[ "${platform}" == 'linux' ]]; then
     alias ls="ls --color=auto"
 fi
 
+eval `dircolors ~/.vim/bundle/dircolors-solarized/dircolors.256dark`
+
 # Prompt
 # Copy and revise from:
 #   https://github.com/necolas/dotfiles
