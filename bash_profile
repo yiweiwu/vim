@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin
+
+# fix long line entry wrapping in bash
+shopt -s checkwinsize
+
+export PATH
+unset USERNAME
+
 PATH=$PATH:~/devtools/arcanist/bin
 
 # added by setup_fb4a.sh
