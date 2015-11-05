@@ -44,9 +44,8 @@ set cursorline
 " Set up color scheme
 set t_Co=256
 set background=dark
-" let g:solarized_termcolors=256
-" let g:solarized_termtrans = 1
-" colorscheme solarized
+let g:solarized_termtrans = 1
+colorscheme solarized
 " let g:gruvbox_termcolors=16
 " let g:gruvbox_italic=0
 " colorscheme jellybeans
@@ -64,7 +63,7 @@ set background=dark
 " colorscheme zenburn
 " colorscheme flatlandia
 " colorscheme lucius
-colorscheme darcula
+" colorscheme darcula
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
@@ -83,7 +82,7 @@ let g:airline_powerline_fonts=1
 set guifont=Inconsolata\ for\ Powerline
 
 " Set the airline theme
-let g:airline_theme= "powerlineish"
+let g:airline_theme= "solarized"
 
 " Move down/up a single row on the screen
 :nmap j gj
