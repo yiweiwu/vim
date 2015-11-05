@@ -20,8 +20,11 @@ fi
 
 # Make the ls colorful
 if [[ "${platform}" == 'darwin' ]]; then
-    export CLICOLOR=1
-    export LSCOLORS=ExFxCxDxBxegedabagacad
+    # Note: install coreutils before running this.
+    # brew install coreutils
+    PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+    alias ls="ls --color=always"
 elif [[ "${platform}" == 'linux' ]]; then
     alias ls="ls --color=auto"
 fi
