@@ -66,11 +66,15 @@ prompt_source_control() {
         printf "%s" "$1$branchName"
 
     else
+        # Show the current bookmark
         if [ -f /opt/facebook/share/scm-prompt ]; then
             source /opt/facebook/share/scm-prompt
-            if [[ -n $(_dotfiles_scm_info) ]]; then
-                printf "%s" "$1$(_dotfiles_scm_info)"
-            fi
+        fi
+        if [ -f $ADMIN_SCRIPTS/scm-prompt ]; then
+            source $ADMIN_SCRIPTS/scm-prompt
+        fi
+        if [[ -n $(_dotfiles_scm_info) ]]; then
+            printf "%s" "$1$(_dotfiles_scm_info)"
         fi
     fi
 
