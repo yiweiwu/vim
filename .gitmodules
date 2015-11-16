@@ -34,3 +34,6 @@
 [submodule "bundle/dircolors-solarized"]
 	path = bundle/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git
+[submodule "bundle/vim-hack"]
+	path = bundle/vim-hack
+	url = git://github.com/hhvm/vim-hack.git
