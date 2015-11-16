@@ -42,6 +42,9 @@ if [[ "${platform}" == 'darwin' ]]; then
     alias ls="ls --color=always"
 elif [[ "${platform}" == 'linux' ]]; then
     alias ls="ls --color=auto"
+
+    # Make tbgs colorful
+    alias tbgs="tbgs --color"
 fi
 
 eval `dircolors ~/.vim/bundle/dircolors-solarized/dircolors.256dark`
