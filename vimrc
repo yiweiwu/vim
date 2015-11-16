@@ -101,3 +101,9 @@ set hlsearch
 
 " Add ctrl P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" Facebook plugins
+" Enable tbgs in quickfix window
+:if !empty(glob("$ADMIN_SCRIPTS/vim/biggrep.vim"))
+    source $ADMIN_SCRIPTS/vim/biggrep.vim
+:endif
