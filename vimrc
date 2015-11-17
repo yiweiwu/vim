@@ -45,6 +45,8 @@ set cursorline
 set t_Co=256
 set background=dark
 let g:solarized_termtrans = 1
+" Do not need to set this when using solarized iTerm scheme
+" let g:solarized_termcolors=256
 colorscheme solarized
 " let g:gruvbox_termcolors=16
 " let g:gruvbox_italic=0
