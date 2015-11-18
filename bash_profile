@@ -45,6 +45,8 @@ elif [[ "${platform}" == 'linux' ]]; then
 
     # Make tbgs colorful
     alias tbgs="tbgs --color"
+    # Make igbgs colorfull
+    alias igbgs="igbgs --color"
 fi
 
 eval `dircolors ~/.vim/bundle/dircolors-solarized/dircolors.256dark`
