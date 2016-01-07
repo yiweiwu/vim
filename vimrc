@@ -107,6 +107,12 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Ignore some files in ctrl P
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
+" NerdTree
+" Open nerdtree with ctrl n
+map <C-n> :NERDTreeToggle<CR>
+" Close vim if the only window left open is a NerdTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " Facebook plugins
 " Enable tbgs in quickfix window
 :if !empty(glob("$ADMIN_SCRIPTS/vim/biggrep.vim"))

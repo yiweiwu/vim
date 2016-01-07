@@ -37,3 +37,6 @@
 [submodule "bundle/vim-hack"]
 	path = bundle/vim-hack
 	url = git://github.com/hhvm/vim-hack.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
