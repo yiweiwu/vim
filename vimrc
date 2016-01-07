@@ -104,6 +104,8 @@ set hlsearch
 
 " Add ctrl P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+" Ignore some files in ctrl P
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
 " Facebook plugins
 " Enable tbgs in quickfix window
