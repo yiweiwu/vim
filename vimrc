@@ -113,6 +113,9 @@ map <C-n> :NERDTreeToggle<CR>
 " Close vim if the only window left open is a NerdTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Syntastic
+let g:syntastic_python_checkers=['pyflakes']"
+
 " Facebook plugins
 " Enable tbgs in quickfix window
 :if !empty(glob("$ADMIN_SCRIPTS/vim/biggrep.vim"))
