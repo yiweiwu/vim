@@ -102,6 +102,10 @@ set hlsearch
 " Clear highlight
 :nmap \q :nohlsearch<CR>
 
+" Tagbar
+" Open tagbar with F8
+nmap <F8> :TagbarToggle<CR>
+
 " Add ctrl P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Ignore some files in ctrl P
@@ -114,7 +118,11 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Syntastic
+" Use pyflakes as the python checkers
 let g:syntastic_python_checkers=['pyflakes']"
+" Open the location list by default (or open it with :Errors)
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
 
 " Facebook plugins
 " Enable tbgs in quickfix window
