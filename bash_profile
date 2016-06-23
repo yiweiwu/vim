@@ -113,3 +113,7 @@ set_prompts() {
 
 set_prompts
 unset set_prompts
+
+# Set number of lines in history
+HISTSIZE=200
+HISTFILESIZE=200
