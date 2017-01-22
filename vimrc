@@ -45,10 +45,10 @@ set cursorline
 " Set up color scheme
 set t_Co=256
 set background=dark
-let g:solarized_termtrans = 1
+" let g:solarized_termtrans = 1
 " Do not need to set this when using solarized iTerm scheme
 " let g:solarized_termcolors=256
-colorscheme solarized
+" colorscheme solarized
 " let g:gruvbox_termcolors=16
 " let g:gruvbox_italic=0
 " colorscheme jellybeans
@@ -61,7 +61,7 @@ colorscheme solarized
 " colorscheme molokai
 " colorscheme mango
 " let g:hybrid_use_iTerm_colors = 1
-" colorscheme hybrid
+colorscheme hybrid
 " colorscheme iceberg
 " colorscheme zenburn
 " colorscheme flatlandia
@@ -85,7 +85,8 @@ let g:airline_powerline_fonts=1
 set guifont=Inconsolata\ for\ Powerline
 
 " Set the airline theme
-let g:airline_theme= "solarized"
+" let g:airline_theme= "solarized"
+let g:airline_theme= "wombat"
 
 " Move down/up a single row on the screen
 :nmap j gj
