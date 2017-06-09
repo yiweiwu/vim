@@ -56,12 +56,12 @@ set background=dark
 " colorscheme distinguished
 " colorscheme kolor
 " colorscheme Tomorrow-Night-Bright
-" colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night
 " colorscheme noctu
 " colorscheme molokai
 " colorscheme mango
 " let g:hybrid_use_iTerm_colors = 1
-colorscheme hybrid
+" colorscheme hybrid
 " colorscheme iceberg
 " colorscheme zenburn
 " colorscheme flatlandia
