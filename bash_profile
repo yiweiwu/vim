@@ -17,6 +17,11 @@ unset USERNAME
 
 PATH=$PATH:~/devtools/arcanist/bin
 
+# Import ig profile
+if [ -f ~/.ig_profile ]; then
+  source ~/.ig_profile
+fi
+
 # added by setup_fb4a.sh
 export ANDROID_SDK=/opt/android_sdk
 export ANDROID_NDK_REPOSITORY=/opt/android_ndk
@@ -67,15 +72,13 @@ prompt_source_control() {
 
     else
         # Show the current bookmark
-        if [ -f /opt/facebook/share/scm-prompt ]; then
-            source /opt/facebook/share/scm-prompt
+        if [ -f /usr/share/scm/scm-prompt.sh ]; then
+            source /usr/share/scm/scm-prompt.sh
         fi
-        if [ -f $ADMIN_SCRIPTS/scm-prompt ]; then
-            source $ADMIN_SCRIPTS/scm-prompt
+        if [ -f /opt/fbhg/share/scm/scm-prompt.sh ]; then
+            source /opt/fbhg/share/scm/scm-prompt.sh
         fi
-        if [[ -n $(_dotfiles_scm_info) ]]; then
-            printf "%s" "$1$(_dotfiles_scm_info)"
-        fi
+        printf "%s" "$1$(_scm_prompt)"
     fi
 
 }
