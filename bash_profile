@@ -44,7 +44,7 @@ if [[ "${platform}" == 'darwin' ]]; then
     # brew install coreutils
     PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
     MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-    alias ls="ls --color=always"
+    alias ls="ls -G"
 elif [[ "${platform}" == 'linux' ]]; then
     alias ls="ls --color=auto"
 fi
