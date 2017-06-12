@@ -49,7 +49,7 @@ elif [[ "${platform}" == 'linux' ]]; then
     alias ls="ls --color=auto"
 fi
 
-eval `dircolors ~/.vim/bundle/dircolors-solarized/dircolors.256dark`
+# eval `dircolors ~/.vim/bundle/dircolors-solarized/dircolors.256dark`
 
 # Prompt
 # Copy and revise from:
@@ -77,6 +77,9 @@ prompt_source_control() {
         fi
         if [ -f /opt/fbhg/share/scm/scm-prompt.sh ]; then
             source /opt/fbhg/share/scm/scm-prompt.sh
+        fi
+        if [ -f /opt/facebook/hg/share/scm-prompt.sh ]; then
+            source /opt/facebook/hg/share/scm-prompt.sh
         fi
         printf "%s" "$1$(_scm_prompt)"
     fi
