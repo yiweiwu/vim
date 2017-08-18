@@ -120,10 +120,13 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Syntastic
 " Use pyflakes as the python checkers
-let g:syntastic_python_checkers=['pyflakes']"
+let g:syntastic_python_checkers=['pyflakes3']"
 " Open the location list by default (or open it with :Errors)
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 
 " Facebook plugins
 " Enable tbgs in quickfix window
