@@ -111,6 +111,8 @@ nmap <F8> :TagbarToggle<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Ignore some files in ctrl P
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
+" Only search file in current directory
+let g:ctrlp_working_path_mode = 0
 
 " NerdTree
 " Open nerdtree with ctrl n
