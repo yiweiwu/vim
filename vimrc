@@ -122,7 +122,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Syntastic
 " Use pyflakes as the python checkers
-let g:syntastic_python_checkers=['pyflakes3']"
+let g:syntastic_python_checkers=['pyflakes']"
 " Open the location list by default (or open it with :Errors)
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
