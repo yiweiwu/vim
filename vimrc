@@ -116,7 +116,8 @@ let g:ctrlp_working_path_mode = 0
 
 " NerdTree
 " Open nerdtree with ctrl n
-map <C-n> :NERDTreeToggle<CR>
+: map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeFind<CR>
 " Close vim if the only window left open is a NerdTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
