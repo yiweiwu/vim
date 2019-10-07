@@ -86,7 +86,7 @@ set guifont=Inconsolata\ for\ Powerline
 
 " Set the airline theme
 " let g:airline_theme= "solarized"
-let g:airline_theme= "wombat"
+let g:airline_theme= "tomorrow"
 
 " Move down/up a single row on the screen
 :nmap j gj
