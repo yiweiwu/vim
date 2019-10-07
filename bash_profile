@@ -17,19 +17,7 @@ unset USERNAME
 
 PATH=$PATH:~/devtools/arcanist/bin
 
-# Import ig profile
-if [ -f ~/.ig_profile ]; then
-  source ~/.ig_profile
-fi
-
-# added by setup_fb4a.sh
-export ANDROID_SDK=/opt/android_sdk
-export ANDROID_NDK_REPOSITORY=/opt/android_ndk
-export ANDROID_HOME=${ANDROID_SDK}
-export PATH=${PATH}:${ANDROID_SDK}/tools:${ANDROID_SDK}/platform-tools
-
-# I need to know is it running on Linux
-# or on my Mac
+# I need to know is it running on Linux or on my Mac
 platform='unknown'
 osname=$(uname)
 if [[ "${osname}" == 'Linux' ]]; then
@@ -48,8 +36,6 @@ if [[ "${platform}" == 'darwin' ]]; then
 elif [[ "${platform}" == 'linux' ]]; then
     alias ls="ls --color=auto"
 fi
-
-# eval `dircolors ~/.vim/bundle/dircolors-solarized/dircolors.256dark`
 
 # Prompt
 # Copy and revise from:
