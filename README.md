@@ -19,6 +19,11 @@ $ git clone git@github.com:yiweiwu/vim.git ~/.vim/
 $ git submodule update --init
 ```
 
+* Pull the changes
+```
+$ git pull --recurse-submodules
+```
+
 * Create symbolic links for dot files
 ```
 $ ln -s ~/.vim/vimrc ~/.vimrc
