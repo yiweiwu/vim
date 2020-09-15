@@ -1,1 +1,7 @@
-/Users/yiweiwu/.hgrc
+[ui]
+username = Yi-Wei Wu <yiweiwu@fb.com>
+merge = vimdiff
+
+[merge-tools]
+vimdiff.executable = vim
+vimdiff.args = -d $base $local $output $other +close +close
