@@ -10,11 +10,7 @@ export ZSH="/Users/yiweiwu/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="sonicradish"
 # ZSH_THEME="steeef"
-# ZSH_THEME="daveverwer"
-
-fpath+=$HOME/.vim/pure
-autoload -U promptinit; promptinit
-prompt pure
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,3 +99,43 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#######################################################################
+
+# Prompt setup for mercurial
+# I'm not using it for now as there is a Facebook version that I can use
+#   https://github.com/iarkhanhelsky/oh-my-zsh-hg-prompt/blob/master/mercurial-prompt/mercurial-prompt.plugin.zsh
+
+function prompt_yiwei_setup {
+    setopt prompt_subst
+
+    local fb_prompt_file=/opt/facebook/share/scm-prompt
+    if [ -f "$fb_prompt_file" ]; then
+        source "$fb_prompt_file"
+    else
+        echo "couldn't find FB SCM prompt file ${fb_prompt_file}"
+    fi
+
+    autoload -U add-zsh-hook
+    autoload -Uz vcs_info
+
+    # enable VCS systems you use
+    zstyle ':vcs_info:*' enable hg git
+
+    # Enable Mercurial bookmarks
+    zstyle ':vcs_info:hg*:*' get-bookmarks true
+
+    # set formats
+    # %b - branchname
+    # %u - unstagedstr (see below)
+    # %c - stagedstr (see below)
+    # %a - action (e.g. rebase-i)
+    # %R - repository path
+    # %S - path in the repository
+
+
+    # PROMPT='%F{166}%n%{$reset_color%} at %F{yellow}%m%{$reset_color%} in %F{green}%~%{$reset_color%} %F{cyan}$(hg_get_branch_name)%{$reset_color%} $ '
+    PROMPT='%F{166}%n%{$reset_color%}@%F{yellow}%m%{$reset_color%}: %F{green}%~%{$reset_color%} on%F{cyan}$(_scm_prompt)%{$reset_color%} $ '
+}
+
+prompt_yiwei_setup "$@"
