@@ -70,7 +70,7 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mercurial)
+plugins=(git mercurial colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -134,8 +134,12 @@ function prompt_yiwei_setup {
     # %S - path in the repository
 
 
+    # Prompt turns red if the previous command didn't exit with 0.
+	local prompt_indicator='%(?.%F{magenta}.%F{red})${:-❯}%f '
+	PROMPT=$prompt_indicator
+
     # PROMPT='%F{166}%n%{$reset_color%} at %F{yellow}%m%{$reset_color%} in %F{green}%~%{$reset_color%} %F{cyan}$(hg_get_branch_name)%{$reset_color%} $ '
-    PROMPT='%F{166}%n%{$reset_color%}@%F{yellow}%m%{$reset_color%}: %F{green}%~%{$reset_color%} on%F{cyan}$(_scm_prompt)%{$reset_color%}
+    PROMPT+='%F{166}%n%{$reset_color%}@%F{yellow}%m%{$reset_color%}: %F{green}%~%{$reset_color%} on%F{cyan}$(_scm_prompt)%{$reset_color%}
 $ '
 }
 
