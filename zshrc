@@ -135,7 +135,8 @@ function prompt_yiwei_setup {
 
 
     # PROMPT='%F{166}%n%{$reset_color%} at %F{yellow}%m%{$reset_color%} in %F{green}%~%{$reset_color%} %F{cyan}$(hg_get_branch_name)%{$reset_color%} $ '
-    PROMPT='%F{166}%n%{$reset_color%}@%F{yellow}%m%{$reset_color%}: %F{green}%~%{$reset_color%} on%F{cyan}$(_scm_prompt)%{$reset_color%} $ '
+    PROMPT='%F{166}%n%{$reset_color%}@%F{yellow}%m%{$reset_color%}: %F{green}%~%{$reset_color%} on%F{cyan}$(_scm_prompt)%{$reset_color%}
+$ '
 }
 
 prompt_yiwei_setup "$@"
