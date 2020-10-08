@@ -16,6 +16,7 @@ export PATH
 unset USERNAME
 
 PATH=$PATH:~/devtools/arcanist/bin
+export ANDROID_HOME=/opt/android_sdk
 
 # I need to know is it running on Linux or on my Mac
 platform='unknown'
