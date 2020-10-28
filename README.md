@@ -31,3 +31,9 @@ $ ln -s ~/.vim/tmux.conf ~/.tmux.conf
 $ ln -s ~/.vim/bash_profile ~/.bash_profile
 $ ln -s ~/.vim/hgrc ~/.hgrc
 $ ln -s ~/.vim/zshrc ~/.zshrc
+```
+
+* Install oh-my-zsh (https://ohmyz.sh/)
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
