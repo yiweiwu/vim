@@ -49,3 +49,6 @@
 [submodule "bundle/Solarized-Dark-for-Xcode"]
 	path = bundle/Solarized-Dark-for-Xcode
 	url = https://github.com/ArtSabintsev/Solarized-Dark-for-Xcode.git
+[submodule "bundle/fonts"]
+	path = bundle/fonts
+	url = git@github.com:powerline/fonts.git
