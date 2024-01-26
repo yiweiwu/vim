@@ -7,9 +7,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git@github.com:majutsushi/tagbar.git
-[submodule "bundle/airline"]
-	path = bundle/airline
-	url = git@github.com:bling/vim-airline.git
 [submodule "bundle/colorschemes"]
 	path = bundle/colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
@@ -52,3 +49,6 @@
 [submodule "bundle/fonts"]
 	path = bundle/fonts
 	url = git@github.com:powerline/fonts.git
+[submodule "/Users/yiweiwu/.vim/bundle/vim-airline"]
+	path = /Users/yiweiwu/.vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
