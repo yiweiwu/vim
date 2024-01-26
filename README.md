@@ -37,3 +37,16 @@ $ ln -s ~/.vim/zshrc ~/.zshrc
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
+
+* Install powerline font when using airline
+
+There can be missing charactors on Mac when using the vim-airline (https://github.com/vim-airline/vim-airline)
+
+Make sure the powerline fonts are installed and select the powerline font in the terminal.
+
+See installation instruction in https://github.com/powerline/fonts
+
+```
+cd /.vim/bundle/powerline-fonts
+./install.sh
+```
