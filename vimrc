@@ -1,4 +1,5 @@
 execute pathogen#infect()
+
 syntax on
 filetype indent plugin on
 
@@ -56,9 +57,9 @@ set background=dark
 " colorscheme distinguished
 " colorscheme kolor
 " colorscheme Tomorrow-Night-Bright
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
 " colorscheme noctu
-" colorscheme molokai
+colorscheme molokai
 " colorscheme mango
 " let g:hybrid_use_iTerm_colors = 1
 " colorscheme hybrid
@@ -130,9 +131,3 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
-
-" Facebook plugins
-" Enable tbgs in quickfix window
-:if !empty(glob("$ADMIN_SCRIPTS/vim/biggrep.vim"))
-    source $ADMIN_SCRIPTS/vim/biggrep.vim
-:endif
