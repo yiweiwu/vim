@@ -49,7 +49,7 @@ set background=dark
 " let g:solarized_termtrans = 1
 " Do not need to set this when using solarized iTerm scheme
 " let g:solarized_termcolors=256
-" colorscheme solarized
+colorscheme solarized
 " let g:gruvbox_termcolors=16
 " let g:gruvbox_italic=0
 " colorscheme jellybeans
@@ -59,7 +59,7 @@ set background=dark
 " colorscheme Tomorrow-Night-Bright
 " colorscheme Tomorrow-Night
 " colorscheme noctu
-colorscheme molokai
+" colorscheme molokai
 " colorscheme mango
 " let g:hybrid_use_iTerm_colors = 1
 " colorscheme hybrid
