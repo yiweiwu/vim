@@ -17,7 +17,6 @@ set smarttab
 
 " Insert/Delete 4 spaces when hitting a TAB/BACKSPACE
 set softtabstop=4
-
 set shiftwidth=4
 set tabstop=4
 
@@ -50,10 +49,7 @@ set background=dark
 " Do not need to set this when using solarized iTerm scheme
 " let g:solarized_termcolors=256
 colorscheme solarized
-" let g:gruvbox_termcolors=16
-" let g:gruvbox_italic=0
 " colorscheme jellybeans
-" colorscheme gruvbox
 " colorscheme distinguished
 " colorscheme kolor
 " colorscheme Tomorrow-Night-Bright
@@ -61,8 +57,6 @@ colorscheme solarized
 " colorscheme noctu
 " colorscheme molokai
 " colorscheme mango
-" let g:hybrid_use_iTerm_colors = 1
-" colorscheme hybrid
 " colorscheme iceberg
 " colorscheme zenburn
 " colorscheme flatlandia
